@@ -1,0 +1,19 @@
+### GIT ignore ###
+logs/
+*.log
+*.bak
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+.factorypath
+
+### Maven ###
+target/
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+.vscode/
