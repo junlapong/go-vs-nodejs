@@ -1,4 +1,4 @@
-# Java vs Go
+# Compare HTTP Request of Java and Go
 
 ## Java (Spark & Jetty)
 
@@ -21,12 +21,11 @@
 
 	HTTP/1.1 200 OK
 	Content-Type: text/html;charset=utf-8
-	Date: Tue, 11 Jun 2019 09:33:26 GMT
+	Date: Wed, 12 Jun 2019 04:52:38 GMT
 	Server: Jetty(9.4.z-SNAPSHOT)
 	Transfer-Encoding: chunked
 
-	<h1>Hello World!</h1>
-	<h1>The above text is set using a FreeMarkerEngine</h1>
+	Hello Spark
 
 ### Perf Test
 
@@ -35,13 +34,12 @@
 	Running 2m test @ http://localhost:9080/
 	4 threads and 100 connections
 	Thread Stats   Avg      Stdev     Max   +/- Stdev
-		Latency     9.93ms    8.24ms 162.62ms   74.91%
-		Req/Sec     2.82k     0.91k    5.63k    66.64%
-	1344330 requests in 2.00m, 311.54MB read
-	Socket errors: connect 0, read 7, write 2, timeout 0
-	Requests/sec:  11195.93
-	Transfer/sec:    2.59MB
-
+	  Latency     7.41ms    5.77ms 208.75ms   68.69%
+	  Req/Sec     3.52k   521.80     7.36k    80.90%
+	1680580 requests in 2.00m, 280.48MB read
+	Socket errors: connect 0, read 9, write 0, timeout 0
+	Requests/sec:  13994.08
+	Transfer/sec:      2.34MB
 
 ## Go
 
@@ -50,6 +48,7 @@
 	7429428 go-http
 
 	$ go version
+	go version go1.12.5 darwin/amd64
 
 ### Run
 
@@ -80,3 +79,16 @@
 	2308031 requests in 2.00m, 438.02MB read
 	Requests/sec:  19227.84
 	Transfer/sec:    3.65MB
+
+## Tools
+### 1. wrk
+
+	brew install wrk
+
+### 2. httpie
+
+	brew install httpie
+
+### 3. VisualVM
+
+	brew cask install visualvm
