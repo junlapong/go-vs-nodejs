@@ -1,7 +1,8 @@
 package io.github.junlapong.spark;
 
-import static spark.Spark.secure;
 import static spark.Spark.get;
+// import static spark.Spark.secure;
+// import static spark.Spark.redirect;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,11 +26,12 @@ public class SparkApp {
 
 		spark.Spark.port(9080);
 		log.debug("Listen: http://localhost:9080/");
+		//redirect.any("/", "/hello");
 
     	get("/", (request, response) -> {
             log.debug("hello");
     	    Map<String, Object> attributes = new HashMap<>();
-    	    attributes.put("message", "Hello World!");
+    	    attributes.put("message", "Hello Spark");
     	    return new ModelAndView(attributes, "hello.ftl");
     	}, new FreeMarkerEngine());
     }

@@ -89,9 +89,8 @@ public class FreeMarkerEngine extends TemplateEngine {
     }
 
     private Configuration createDefaultConfiguration() {
-        Configuration configuration = new Configuration();
+        Configuration configuration = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
         configuration.setClassForTemplateLoading(FreeMarkerEngine.class, "");
         return configuration;
     }
-
 }
