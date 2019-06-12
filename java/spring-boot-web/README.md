@@ -13,3 +13,17 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 
+
+## Build
+
+### Tomcat
+
+	mvn clean package -Dmaven.test.skip
+
+### Jetty
+
+	mvn -f pom-jetty.xml clean package -Dmaven.test.skip
+
+## Run
+
+	java -jar target/spring-boot-web-0.0.1-SNAPSHOT.jar
