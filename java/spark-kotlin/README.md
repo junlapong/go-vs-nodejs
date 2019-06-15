@@ -13,7 +13,7 @@ Source code for the Spark + Kotlin tutorial at sparktutorials.github.io:
 
 ## Test
 
-use [httppie](https://httpie.org/) for test request
+use [httpie](https://httpie.org/) for test request
 
 ```term
 $ http http://localhost:4567/users
